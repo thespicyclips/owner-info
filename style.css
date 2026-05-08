@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #050505, #111827);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* BACKGROUND GLOW */
+.background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 119, 255, 0.25), transparent 70%);
+  filter: blur(50px);
+  animation: glowMove 6s infinite alternate;
+}
+
+/* MAIN CONTAINER */
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* SMALL TEXT */
+.small-text {
+  color: #9ca3af;
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* NAME (FULL BOLD) */
+h1 {
+  font-size: 52px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  font-weight: 900;   /* 🔥 fully bold name */
+}
+
+/* DESCRIPTION */
+.description {
+  color: #d1d5db;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* INFO BOX */
+.info-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.info-box:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.08);
+}
+
+/* HEADINGS INSIDE BOX */
+.info-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #60a5fa;
+  font-weight: 900;
+}
+
+/* CONTACT DETAILS (FULL BOLD) */
+.info-box p {
+  font-size: 17px;
+  color: #f3f4f6;
+  font-weight: 900;   /* 🔥 fully bold contacts */
+}
+
+/* QUOTE */
+.quote {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #cbd5e1;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+.footer-text {
+  margin-top: 35px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2px;
+}
+
+/* ANIMATION */
+@keyframes glowMove {
+  from {
+    transform: translate(-80px, -50px);
+  }
+  to {
+    transform: translate(80px, 50px);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card {
+    padding: 40px 22px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .info-box h2 {
+    font-size: 18px;
+  }
+
+  .info-box p {
+    font-size: 15px;
+    word-break: break-word;
+    font-weight: 900;
+  }
+}
